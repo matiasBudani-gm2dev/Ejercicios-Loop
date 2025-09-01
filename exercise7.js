@@ -1,3 +1,4 @@
+const prompt = require("prompt-sync")()
 const {isNumber} = require('./functions.js')
 /* 7. Utiliza un bucle do...while para pedir al usuario que ingrese un número positivo.
 Continúa pidiendo hasta que ingrese un número positivo. Ejecutar ejercicio en consola
