@@ -8,10 +8,6 @@ function isNumber(variable, integerVerification=false){
     return verificationNumber
 }
 
-function numBiggerThan(num1, num2){
-    return num1>num2
-}
-
 function verifyPrimeNumber(num){
     divisores = 0
     for(let i = num; i > 0; i--){
@@ -22,4 +18,4 @@ function verifyPrimeNumber(num){
     return divisores == 2
 }
 
-module.exports = { isNumber, numBiggerThan, verifyPrimeNumber };
+module.exports = { isNumber, verifyPrimeNumber };
