@@ -6,7 +6,7 @@ Por ejemplo: 4 ⇒ 4 * 3 * 2 * 1 = 2. */
 let factorial = 1;
 let numExercise11;
 do{
-    numExercise11 = prompt("Ingrese un numero positivo: ")
+    numExercise11 = prompt("Ingrese un numero entero positivo mayor a 0: ")
     numExercise11 !== '' ? numExercise11 = Number(numExercise11) : null
     !isNumber(numExercise11, integerVerification=true) ? console.log("El sistema solo acepta numeros positivos"):
     numExercise11 <=0 ? console.log("El numero debe ser positivo") : null
