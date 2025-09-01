@@ -53,8 +53,11 @@ Escribe el código que muestre números primos en el intervalo de 2 a n.
 Ejemplo: Para n = 10 el resultado será 2, 3, 5, 7. */
 let numExercise3;
 do{
-    numExercise3 = prompt("Ingrese un numero entero mayor a 1: ")
+    numExercise3 = prompt("Ingrese un numero entero mayor a 1(ingrese 0 para terminar): ")
     numExercise3 = Number(numExercise3)
+    if(numExercise3 === 0){
+        break;
+    }
     isNumber(numExercise3, integerVerification=true) ? 
     numBiggerThan(numExercise3, 1) ? null : console.log("El numero debe ser mayor a 1") : 
     console.log("El sistema solo acepta numeros enteros")
