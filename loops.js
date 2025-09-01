@@ -37,8 +37,11 @@ que el usuario ingrese un número mayor que 250 o lo cancele Aquí podemos asumi
 que el usuario solo ingresará números. */
 let numExercise2;
 do{
-    numExercise2 = prompt("Ingrese un numero mayor a 250: ")
+    numExercise2 = prompt("Ingrese un numero mayor a 250(ingrese 0 para terminar): ")
     numExercise2 = Number(numExercise2)
+    if(numExercise2=== 0){
+        break;
+    }
     isNumber(numExercise2) ? numExercise2 < 250 ? console.log("El numero debe ser mayor a 250") : null : console.log("El sistema solo acepta numeros") 
 }while(numExercise2 <= 250 || !isNumber(numExercise2))
 saltoLinea()
@@ -62,3 +65,4 @@ for(let i=1; i<numExercise3; i++){
 for(let i = numExercise3; i > 0; i--){
     verifyPrimeNumber(i) ? console.log(i): null
 }
+saltoLinea()
