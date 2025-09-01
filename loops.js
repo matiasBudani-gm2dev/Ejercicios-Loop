@@ -1,7 +1,7 @@
 const prompt = require("prompt-sync")()
 // functions
 function isNumber(variable, integerVerification=false){
-    let verificationNumber = !isNaN(variable) && typeof variable === 'number' && variable != ''
+    let verificationNumber = !isNaN(variable) && typeof variable === 'number' && variable !== null
     if(verificationNumber && integerVerification){
         return variable % 1 == 0
     }
@@ -38,8 +38,8 @@ que el usuario solo ingresará números. */
 let numExercise2;
 do{
     numExercise2 = prompt("Ingrese un numero mayor a 250(ingrese 0 para terminar): ")
-    numExercise2 = Number(numExercise2)
-    if(numExercise2=== 0){
+    numExercise2.trim() !== '' ? numExercise2 = Number(numExercise2) : null
+    if(numExercise2 === 0){
         break;
     }
     isNumber(numExercise2) ? numExercise2 < 250 ? console.log("El numero debe ser mayor a 250") : null : console.log("El sistema solo acepta numeros") 
@@ -54,7 +54,7 @@ Ejemplo: Para n = 10 el resultado será 2, 3, 5, 7. */
 let numExercise3;
 do{
     numExercise3 = prompt("Ingrese un numero entero mayor a 1(ingrese 0 para terminar): ")
-    numExercise3 = Number(numExercise3)
+    numExercise3.trim() !== '' ? numExercise3 = Number(numExercise3) : null
     if(numExercise3 === 0){
         break;
     }
@@ -74,13 +74,14 @@ ingrese un número negativo */
 let numExercise4;
 do{
     numExercise4 = prompt("Ingrese un numero para calcular su potencia (ingrese uno negativo para terminar el proceso): ")
-    numExercise4 = Number(numExercise4)
+    numExercise4.trim() !== '' ? numExercise4 = Number(numExercise4) : null
     if(!isNumber(numExercise4)){
         console.log("El sistema solo acepta numeros") 
     }else{
-        if(numExercise4 > 0){
+        if(numExercise4 >= 0){
             console.log(Math.pow(numExercise4, 2))
         }
     }
     
-}while(!isNumber(numExercise4) || numExercise4 > 0)
+}while(!isNumber(numExercise4) || numExercise4 >= 0)
+saltoLinea()
