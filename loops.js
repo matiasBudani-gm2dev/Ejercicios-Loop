@@ -1,8 +1,27 @@
 const prompt = require("prompt-sync")()
 // functions
-function isNumber(variable){
-    return !isNaN(variable) && typeof variable === 'number' && variable != ''
+function isNumber(variable, integerVerification=false){
+    let verificationNumber = !isNaN(variable) && typeof variable === 'number' && variable != ''
+    if(verificationNumber && integerVerification){
+        return variable % 1 == 0
+    }
+    return verificationNumber
 }
+
+function numBiggerThan(num1, num2){
+    return num1>num2
+}
+
+function verifyPrimeNumber(num){
+    divisores = 0
+    for(let i = num; i > 0; i--){
+        if (num % i == 0){
+            divisores++
+        }
+    }
+    return divisores == 2
+}
+
 function saltoLinea(){
     console.log()
 }
@@ -29,3 +48,17 @@ primo, porque no puede ser dividido exactamente por 2, 3 y 4.
 Escribe el código que muestre números primos en el intervalo de 2 a n.
 
 Ejemplo: Para n = 10 el resultado será 2, 3, 5, 7. */
+let numExercise3;
+do{
+    numExercise3 = prompt("Ingrese un numero entero mayor a 1: ")
+    numExercise3 = Number(numExercise3)
+    isNumber(numExercise3, integerVerification=true) ? 
+    numBiggerThan(numExercise3, 1) ? null : console.log("El numero debe ser mayor a 1") : 
+    console.log("El sistema solo acepta numeros enteros")
+}while(!isNumber(numExercise3, integerVerification=true) || !numBiggerThan(numExercise3, 1) )
+for(let i=1; i<numExercise3; i++){
+
+}
+for(let i = numExercise3; i > 0; i--){
+    verifyPrimeNumber(i) ? console.log(i): null
+}
