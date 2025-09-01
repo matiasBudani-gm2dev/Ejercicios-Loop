@@ -118,3 +118,29 @@ do{
     !isNumber(numExercise7) ? console.log("El sistema solo acepta numeros"):
     numExercise7 <=0 ? console.log("El numero debe ser positivo") : null
 }while(!isNumber(numExercise7) || numExercise7<=0)
+
+/* 8 Crea un array de nombres. Utiliza un bucle for-of para imprimir cada nombre en la
+consola. */
+
+/* 9. Crea un array de números. Utiliza un bucle for-of para imprimir en la consola los
+números hasta encontrar el número 5, luego detén el bucle. */ 
+
+
+/* 10. Utiliza un bucle for-of para imprimir en la consola cada elemento del array y su
+posición (índice) */
+
+/* 11. Crea un programa que pida ingresar un número, y muestre su factorial. Este se
+calcula multiplicando el mismo número y todos los números que le anteceden hasta el 1.
+Por ejemplo: 4 ⇒ 4 * 3 * 2 * 1 = 2. */
+let factorial = 1;
+let numExercise11;
+do{
+    numExercise11 = prompt("Ingrese un numero positivo: ")
+    numExercise11 !== '' ? numExercise11 = Number(numExercise11) : null
+    !isNumber(numExercise11, integerVerification=true) ? console.log("El sistema solo acepta numeros positivos"):
+    numExercise11 <=0 ? console.log("El numero debe ser positivo") : null
+}while(!isNumber(numExercise11, integerVerification=true) || numExercise11<=0)
+for(let i = numExercise11; i > 0; i--){
+    factorial *= i
+}
+console.log(factorial)
