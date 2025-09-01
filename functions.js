@@ -8,14 +8,4 @@ function isNumber(variable, integerVerification=false){
     return verificationNumber
 }
 
-function verifyPrimeNumber(num){
-    divisores = 0
-    for(let i = num; i > 0; i--){
-        if (num % i == 0){
-            divisores++
-        }
-    }
-    return divisores == 2
-}
-
-module.exports = { isNumber, verifyPrimeNumber };
+module.exports = { isNumber};
