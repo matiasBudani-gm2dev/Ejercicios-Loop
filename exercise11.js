@@ -1,3 +1,4 @@
+const prompt = require("prompt-sync")()
 const {isNumber} = require('./functions.js')
 /* 11. Crea un programa que pida ingresar un número, y muestre su factorial. Este se
 calcula multiplicando el mismo número y todos los números que le anteceden hasta el 1.
